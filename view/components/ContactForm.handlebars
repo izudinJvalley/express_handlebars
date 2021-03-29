@@ -1,0 +1,30 @@
+<form class="ContactForm" action="/send">
+
+    <label for="name">nama</label>
+    <input type="text" id="name" name="name">
+    <br/>
+    <label for="email">email</label>
+    <input type="text" id="email" name="email">
+    <br/>
+    <label for="message">message</label>
+    <textarea name="message" id="message" name="message"></textarea>
+    <br/>
+    <button type="submit">Submit</button>
+
+</form>
+
+<!--Conditional rendering-->
+{{#if message}}
+    <div class="card_info" onclick="closeInfo()">
+
+        <h3 class="card_title">Terimakasih</h3>
+        <p class="card_body">
+            Hai.. {{name}}.. <br>
+            Terimakasih kamu telah menghubungi kami.. <br>
+            Kami akan membalas ke email {{email}}
+            <br>
+            <br>
+            <i>Salam hangat dari Jvalley..</i>
+        </p>
+    </div>
+{{/if}}
